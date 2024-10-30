@@ -1,16 +1,8 @@
-# This is a sample Python script.
+from function import count
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+a = input("Що-небудь: ")
+result_digits, result_letters, result_symbols = count(a)
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print("Кількість цифр:", result_digits)
+print("Кількість букв:", result_letters)
+print("Кількість інших символів:", result_symbols)
