@@ -1,16 +1,24 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+from function import _list
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+a = input("Enter numbers separated by spaces: ")
+try:
+    number_list = [int(num) for num in a.split()]
+except ValueError:
+    print("Invalid input. Please enter only numbers separated by spaces.")
+    exit()
+
+result,minus,zero = _list(number_list)
+data = result
+
+print(f' Sort list{result}')
+print(f' The maximum value of the list: {data[-1]}')
+print(f' The minimum value of the list: {data[0]}')
+print(f'Number of negative numbers: {minus}')
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+
+
+
